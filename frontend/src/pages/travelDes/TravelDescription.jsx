@@ -16,7 +16,12 @@ const TravelDescription = () => {
         </div>
 
         <div className="additional_services">
-            Some different info
+          <div className='additional_info'>Проживання в готелі</div>
+          <div className='additional_info'>Екскурсійний супровід</div>
+          <div className='additional_info'>Організаційна підтримка до, під час подорожі</div>
+          <div className='additional_info'>Особисті витрати</div>
+          <div className='additional_info'>Харчування</div>
+          <div className='additional_info'>Додатковий трансфер в аеропорт</div>
         </div>
     </main>
 

@@ -62,3 +62,21 @@
   outline: none;
   border: none;
 }
+
+.additional_services {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.additional_info {
+  background-color: #2f2f2f;
+  color: #f6f6f6;
+  width: 350px;
+  height: 150px;
+  border-radius: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin-left: 10px; 
+}
