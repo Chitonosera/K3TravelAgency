@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('country');
             $table->string('date');
             $table->string('place');
+            $table->string('price');
             $table->string('services');
             $table->timestamps();
         });
