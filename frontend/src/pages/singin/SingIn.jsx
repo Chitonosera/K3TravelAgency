@@ -1,10 +1,12 @@
 import React from 'react'
 
+
 import './SingIn.css'
 
 import { customerService } from '../../services/customer';
 
 const SingIn = () => {
+  
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');

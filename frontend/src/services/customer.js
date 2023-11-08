@@ -1,18 +1,27 @@
-import axios from 'axios';
-import { API_URL } from '../constans';
+// import { API_URL } from '../constans';
 
 export const customerService = {
-  signup: async function(name, email, password) {
+  signup: async function (name, email, password) {
     try {
-      const response = await axios.post(`${API_URL}/register`, {
-        name: name,
-        email: email,
-        password: password
+      const response = await fetch('/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        },
+        mode: 'cors',
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password,
+        }),
       });
-      return response;
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
     } catch (error) {
       throw error;
     }
-  }
+  },
 };
-
