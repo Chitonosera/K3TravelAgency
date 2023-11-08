@@ -35,3 +35,4 @@ Route::get('tours', 'API\Auth\MainPageInfo@getTours'); // Отримання в�
 Route::get('user/profile', 'UserController@getUserProfile'); // Отримання інформації про користувача
 
 Route::post('check-phone', 'API\Auth\BotController@checkPhone');
+Route::post('check-tours', 'API\Auth\BotController@checkTours');

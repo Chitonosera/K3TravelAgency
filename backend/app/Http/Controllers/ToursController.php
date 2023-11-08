@@ -12,6 +12,7 @@ class ToursController extends Controller
             'name' => 'required|string',
             'country' => 'required|string',
             'date' => 'required|date',
+            'price' => 'required|string',
             'place' => 'required|integer',
             'services' => 'string',
         ]);
@@ -20,7 +21,8 @@ class ToursController extends Controller
         $tour->name = $request->input('name');
         $tour->country = $request->input('country');
         $tour->date = $request->input('date');
-        $tour->seats = $request->input('place');
+        $tour->price = $request->input('price');
+        $tour->place = $request->input('place');
         $tour->services = $request->input('services');
         $tour->save();
 
@@ -46,6 +48,7 @@ class ToursController extends Controller
             'name' => 'required|string',
             'country' => 'required|string',
             'date' => 'required|date',
+            'price' => 'required|string',
             'place' => 'required|integer',
             'services' => 'string',
         ]);
@@ -53,7 +56,7 @@ class ToursController extends Controller
         $tour->name = $request->input('name');
         $tour->country = $request->input('country');
         $tour->date = $request->input('date');
-        $tour->seats = $request->input('seats');
+        $tour->place = $request->input('place');
         $tour->services = $request->input('services');
         $tour->save();
 

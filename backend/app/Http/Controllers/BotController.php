@@ -20,4 +20,17 @@ class BotController extends Controller
             return response()->json(['message' => 'Номер телефону не знайдено.'], 404);
         }
     }
+    public function  checkTours(Request $request)
+    {
+        $name = $request->input('name'); // Отримання нвзв туру від телеграм-бота
+        $tour = Tours::where('name', $name)->first(); 
+
+        if($tour)
+        {
+            return response()->json(['message' => 'Ваш тур знайдено.'], 200);
+        }
+        else{
+            return response()->json(['message' => 'Вашого туру не існує.'], 404);
+        }
+    }
 }
