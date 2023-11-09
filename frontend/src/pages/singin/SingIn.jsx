@@ -13,10 +13,7 @@ const SingIn = () => {
   const [password, setPassword] = React.useState('');
   const [number, setNumber] = React.useState('');
 
-
   const navigate = useNavigate();
-
-  const [reqRes, setReqRes] = React.useState('');
 
   const [isRightPanelActive, setIsRightPanelActive] = React.useState(false);
 
@@ -44,24 +41,12 @@ const SingIn = () => {
     navigate('/');
   }
 
-  // const onRegisterSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await customerService.signup(name, email, password);
-  //     setReqRes('Success');
-  //   } catch (error) {
-  //     setReqRes('Failed');
-  //   }
-  // };
-  
-
   return (
     <div className="singin_page">
       <div className={`container ${isRightPanelActive ? 'right-panel-active' : ''}`} id="container">
         <div className="form-container sign-up-container">
           <form action="#">
             <h1>Створити акаунт</h1>
-            <h2>{reqRes}</h2>
             <input className='form_input' type="text" placeholder="Name" 
               value={name}
               onChange={e => setName(e.target.value)}

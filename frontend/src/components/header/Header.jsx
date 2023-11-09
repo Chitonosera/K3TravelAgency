@@ -1,56 +1,89 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
-import "./Header.css"
+import './Header.css';
 
 const Header = () => {
-    const [activePage, setActivePage] = React.useState(0);
-    const navMenu = [
-      {name: 'Подорожі', link: '/'},
-      {name: 'Календар', link: '/calendar'},
-      {name: 'Договір', link: '/contract'},
-      {name: 'Контакти', link: '/contacts'},
-    ];
+  const user = JSON.parse(localStorage.getItem('user-info'));
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const navMenu = [
+    { name: 'Подорожі', link: '/' },
+    { name: 'Календар', link: '/calendar' },
+    { name: 'Договір', link: '/contract' },
+    { name: 'Контакти', link: '/contacts' },
+  ];
+
+  const logOut = () => {
+    localStorage.clear();
+    navigate('/singIn');
+  };
+
+  const isActive = (link) => location.pathname === link;
 
   return (
     <header className="header">
-        <nav className="nav">
-            <Link to='/'>
-                <div className='logo'>
-                <img className='nav_logo' src="../Main_logo.svg" alt="" />
-                <img src="../LogoText.png" alt="" />
-                </div>
+      <nav className="nav">
+        <Link to="/">
+          <div className="logo">
+            <img className="nav_logo" src="../Main_logo.svg" alt="" />
+            <img src="../LogoText.png" alt="" />
+          </div>
+        </Link>
+
+        <ul className="nav_list">
+          {navMenu.map((obj, index) => (
+            <Link to={obj.link} key={index}>
+              <li className="nav_list">
+                <p
+                  className={isActive(obj.link) ? 'activePage' : 'nav_link'}
+                >
+                  {obj.name}
+                </p>
+              </li>
             </Link>
+          ))}
 
-            <ul className='nav_list'>
-                { navMenu.map((obj, index) => (
-                    <Link to={obj.link} key={index}
-                      onClick={() => setActivePage(index)}
-                    >
-                      <li className='nav_list'>
-                          <p className={activePage === index ? 'activePage' : 'nav_link'} href="">{obj.name}</p>
-                      </li>
-                    </Link>
-                  )
-                )}
-
-
-                <div className="singin">
-                    
-                    <Link to="singin" onClick={() => setActivePage(6)}>
-                        <li className="nav_item">
-                            <p className={activePage === 6 ? 'activePage' : 'nav_link'} href="">Увійти</p>
-                        </li>
-                    </Link>
-                    <Link to="customerCab" onClick={() => setActivePage(-1)}>
-                      <img className='nav_acc' src="../account_logo.png" alt="" />
-                    </Link>
-                </div>
-
-
-            </ul>
-        </nav>
+          {localStorage.getItem('user-info') ? (
+            <div className="singin">
+              <Link to="customerCab">
+                <li className="nav_item">
+                  <p
+                    className={isActive('/customerCab') ? 'activePage' : 'nav_link'}
+                  >
+                    {user && user.name}
+                  </p>
+                </li>
+              </Link>
+              <Link to="customerCab">
+                <img className="nav_acc" src="../account_logo.png" alt="" />
+              </Link>
+              <Link to="singIn">
+                <li className="nav_item">
+                  <p className="nav_link" onClick={logOut}>
+                    LogOut
+                  </p>
+                </li>
+              </Link>
+            </div>
+          ) : (
+            <div className="singin">
+              <Link to="singin">
+                <li className="nav_item">
+                  <p
+                    className={isActive('/singin') ? 'activePage' : 'nav_link'}
+                  >
+                    Зареєструватися
+                  </p>
+                </li>
+              </Link>
+            </div>
+          )}
+        </ul>
+      </nav>
     </header>
-  )
-}
-export default Header
+  );
+};
+
+export default Header;
