@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 import './SingIn.css'
@@ -10,6 +11,10 @@ const SingIn = () => {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [number, setNumber] = React.useState('');
+
+
+  const navigate = useNavigate();
 
   const [reqRes, setReqRes] = React.useState('');
 
@@ -19,15 +24,35 @@ const SingIn = () => {
     setIsRightPanelActive(prevState => !prevState);
   }
 
-  const onRegisterSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await customerService.signup(name, email, password);
-      setReqRes('Success');
-    } catch (error) {
-      setReqRes('Failed');
-    }
-  };
+  const singUp = async () => {
+    
+    let result = await fetch('http://localhost:8000/api/register',{
+      method: 'POST',
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        password: password,
+        number: number,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept':'application/json',
+      },
+    })
+    result = await result.json();
+    localStorage.setItem("user-info",JSON.stringify(result))
+    navigate('/');
+  }
+
+  // const onRegisterSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await customerService.signup(name, email, password);
+  //     setReqRes('Success');
+  //   } catch (error) {
+  //     setReqRes('Failed');
+  //   }
+  // };
   
 
   return (
@@ -49,8 +74,12 @@ const SingIn = () => {
               value={password}
               onChange={e => setPassword(e.target.value)}
             />
+            <input className='form_input' type="number" placeholder="Number" 
+              value={number}
+              onChange={e => setNumber(e.target.value)}
+            />
             <button className='form_btn'
-              onClick={e => onRegisterSubmit(e)}
+              onClick={singUp}
             >Sign Up</button>
           </form>
         </div>
