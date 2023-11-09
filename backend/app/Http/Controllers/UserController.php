@@ -20,4 +20,16 @@ class UserController extends Controller
 
         return $user;
     }
+
+    function checkPhone(Request $req)
+    {
+        $user = User::where('number', $number)->first();
+
+        if ($user) {
+            return response()->json(['message' => 'Номер телефону вже існує в базі даних'], 422);
+        } else {
+            return response()->json(['message' => 'Номер телефону унікальний'], 200);
+        }
+    }
+
 }
