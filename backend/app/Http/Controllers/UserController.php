@@ -18,6 +18,7 @@ class UserController extends Controller
         $user->number= $req->input('number');
         $user->save();
 
+        
         return $user;
     }
 
