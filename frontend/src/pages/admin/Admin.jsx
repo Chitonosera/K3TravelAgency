@@ -32,6 +32,22 @@ const Admin = () => {
     localStorage.setItem("tour-info",JSON.stringify(result))
   }
 
+  const [tours, setTours] = React.useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/getTour');
+        const data = await response.json();
+        setTours(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className='admin_page'>
 
@@ -51,25 +67,27 @@ const Admin = () => {
         </thead>
 
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Назва вашого туру</td>
-            <td>Країна туру</td>
-            <td>Ціна туру</td>
-            <td>01/01/2023</td>
-            <td>20</td>
-            <td>Wi-Fi, сніданок</td>
-            <td>
-              <div className="tool_panel">
-                <button className="tool_panel" type="button">
-                  <img alt="edit" />
-                </button>
-                <button type="button">
-                  <img alt="delet" />
-                </button>
-              </div>
-            </td>
-          </tr>
+          {tours.map((tour) => (
+            <tr key={tour.id}>
+              <td>{tour.id}</td>
+              <td>{tour.name}</td>
+              <td>{tour.country}</td>
+              <td>{tour.price}</td>
+              <td>{tour.date}</td>
+              <td>{tour.places}</td>
+              <td>{tour.additionalServices}</td>
+              <td>
+                <div className="tool_panel">
+                  <button className="tool_panel" type="button">
+                    <img alt="edit" />
+                  </button>
+                  <button type="button">
+                    <img alt="delete" />
+                  </button>
+                </div>
+              </td>
+            </tr>
+          ))}
         </tbody>
         
       </table>
