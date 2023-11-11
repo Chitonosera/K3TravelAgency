@@ -28,4 +28,11 @@ class TourController extends Controller
 
         return $tour;
     }
+
+    public function destroy(Tour $tour)
+    {
+       $tour->delete();
+
+        return $tour;
+    }
 }

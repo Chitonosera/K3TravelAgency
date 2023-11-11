@@ -25,6 +25,9 @@ Route::post('login',[UserController::class,'login']);
 
 Route::post('addTour', [TourController::class, 'addTour']);
 Route::get('getTour', [TourController::class, 'getTour']);
+Route::delete('destroy', [TourController::class, 'destroy']);
+
+
 
 // Route::get('checkPhone/{number}', [UserController::class, 'checkPhone']);
 

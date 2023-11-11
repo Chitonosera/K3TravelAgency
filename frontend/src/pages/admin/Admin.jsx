@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './Admin.css';
 
 
@@ -34,7 +35,7 @@ const Admin = () => {
 
   const [tours, setTours] = React.useState([]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:8000/api/getTour');
