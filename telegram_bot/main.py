@@ -126,7 +126,7 @@ def confirm_phone(query):
     bot.send_message(chat_id, f"Підтверджено номер телефону. Почекайте, доки я шукаю вас в своїх даних...")
     waiting_for_phone[chat_id] = False
 
-    url = 'http://localhost:8000/check-Phone'  # Впевніться, що це правильний URL для вашого API
+    url = 'http://localhost:8000/checkPhone'  # Впевніться, що це правильний URL для вашого API
 
     data = {'phone': phone_number}
 
@@ -144,7 +144,7 @@ def confirm_phone(query):
             print("Помилка розкодування JSON відповіді від сервера")
     else:
         print(f"Помилка запиту: {response.status_code}")
-        bot.send_message(chat_id, "Вас не існує в наших даних. Зареєструйтесь на нашому сайті щоб продовжити")
+        bot.send_message(chat_id, f"Вас не існує в наших даних{phone_number,user_phone.get(chat_id)}. Зареєструйтесь на нашому сайті щоб продовжити")
         auth = types.InlineKeyboardMarkup()
         auth.add(
         types.InlineKeyboardButton('Перейти на сайт', url='https://translate.google.com/?sl=en&tl=uk&op=translate'))

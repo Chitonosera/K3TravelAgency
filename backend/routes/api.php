@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TourController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register',[UserController::class,'register']);
 Route::post('login',[UserController::class,'login']);
 
-Route::get('checkPhone/{number}', [UserController::class, 'checkPhone']);
+Route::post('addTour', [TourController::class, 'addTour']);
+Route::get('getTour', [TourController::class, 'getTour']);
+
+// Route::get('checkPhone/{number}', [UserController::class, 'checkPhone']);
+
