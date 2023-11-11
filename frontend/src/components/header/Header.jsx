@@ -45,6 +45,11 @@ const Header = () => {
             </Link>
           ))}
 
+          <Link to="admin">
+            <p className='nav_link'>Admin</p>
+          </Link>
+
+
           {localStorage.getItem('user-info') ? (
             <div className="singin">
               <Link to="customerCab">
