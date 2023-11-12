@@ -38,11 +38,11 @@ class UserController extends Controller
 
         if (!$user || !Hash::check($req->number, $user->number))
         {
-            return ["error" => "Всьо хуйня"];
+            return ["error" => "Vse Huinya"];
         }
-
-        // If the check passes, you might want to return something related to the user.
         return $number;
+        
+        
     }
 
 
