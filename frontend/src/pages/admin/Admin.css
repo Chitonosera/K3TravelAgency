@@ -123,3 +123,8 @@
 	text-decoration: none;
 	color: white;
   }
+
+  .product_img {
+    width: 100px;
+    height: 100px;
+  }

@@ -56,11 +56,11 @@ const start = () => {
             return bot.sendMessage(chatId, 'Шкода, що ви не готові. Можливо, наступного разу!');
         }
         if (chats[chatId]) {
-            chats[chatId].phone = phone_number;
+            chats[chatId].phone = text;
             
             try {
                 const response = await axios.post(apiUrl, {
-                    phone_number: text,
+                    phone: text,
                 });
                 const status = response.data.status;
                 const message = response.data.message;

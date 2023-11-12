@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TourController;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +24,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('register',[UserController::class,'register']);
 Route::post('login',[UserController::class,'login']);
+Route::post('checkPhone',[UserController::class,'checkPhone']);
 
-Route::post('addTour', [TourController::class, 'addTour']);
-Route::get('getTour', [TourController::class, 'getTour']);
-Route::delete('destroy', [TourController::class, 'destroy']);
+
+Route::post('addproduct',[ProductController::class,'addProduct']);
+Route::get('list',[ProductController::class,'list']);
+
+
+
+// Route::post('addTour', [TourController::class, 'addTour']);
+// Route::get('getTour', [TourController::class, 'getTour']);
+// Route::delete('destroy', [TourController::class, 'destroy']);
 
 
 

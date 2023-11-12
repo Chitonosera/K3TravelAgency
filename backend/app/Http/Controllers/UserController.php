@@ -34,14 +34,16 @@ class UserController extends Controller
 
     function checkPhone(Request $req)
     {
-        $user = User::where('number',$req->$number)->first();
+        $user = User::where('number', $req->number)->first();
 
-        if(!$user || !Hash::check($req->number,$user->number))
+        if (!$user || !Hash::check($req->number, $user->number))
         {
-            return ["error"=>"Всьо хуйня"];
+            return ["error" => "Всьо хуйня"];
         }
+
+        // If the check passes, you might want to return something related to the user.
         return $number;
-      
     }
+
 
 }
