@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 import './SingIn.css'
 
+import Login from '../login/Login';
+
 import { customerService } from '../../services/customer';
 
 const SingIn = () => {
@@ -69,14 +71,8 @@ const SingIn = () => {
           </form>
         </div>
         <div className="main_login">
-            <div className="form-container sign-in-container">
-                <form action="#">
-                    <h1>Увійти</h1>
-                    <input className='form_input' type="email" placeholder="Email" />
-                    <input className='form_input' type="password" placeholder="Password" />
-                    <button className='form_btn'>Sign In</button>
-                </form>
-            </div>
+            
+            <Login />
 
             <div className="overlay-container">
                 <div className="overlay">

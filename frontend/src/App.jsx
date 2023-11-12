@@ -12,6 +12,7 @@ import SingIn from './pages/singin/SingIn'
 
 import './App.css'
 import TravelDescription from './pages/travelDes/TravelDescription';
+import Admin from './pages/admin/Admin';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route  path='/customerCab' element={<CustomerCab />}/>
           <Route  path='/singin' element={<SingIn />}/>
           <Route  path='/travel' element={<TravelDescription />}/>
+          <Route  path='/admin' element={<Admin />}/>
         </Routes>
       </div>
       <Footer />

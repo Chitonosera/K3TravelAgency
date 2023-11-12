@@ -18,19 +18,30 @@ class UserController extends Controller
         $user->number= $req->input('number');
         $user->save();
 
-        
+
+        return $user;
+    }
+
+    function login(Request $req)
+    {
+        $user= User::where('email',$req->email)->first();
+        if(!$user || !Hash::check($req->password,$user->password))
+        {
+            return ["error"=>"Email or password is not matched"];
+        }
         return $user;
     }
 
     function checkPhone(Request $req)
     {
-        $user = User::where('number', $number)->first();
+        $user = User::where('number',$req->$number)->first();
 
-        if ($user) {
-            return response()->json(['message' => 'Номер телефону вже існує в базі даних'], 422);
-        } else {
-            return response()->json(['message' => 'Номер телефону унікальний'], 200);
+        if(!$user || !Hash::check($req->number,$user->number))
+        {
+            return ["error"=>"Всьо хуйня"];
         }
+        return $number;
+      
     }
 
 }
