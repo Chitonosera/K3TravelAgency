@@ -74,6 +74,7 @@ const start = () => {
         return bot.sendMessage(chatId, 'Чел, що ти висрав?');
     });
 };
-
+//npm install axios
+//npm install node-telegram-bot-api nodemon
 
 start();
