@@ -1,10 +1,13 @@
 .travels_title{
     text-align: center;
     color: #D5CE50;
+
 }
 
 .travels_top{
     margin: 50px 0;
+    height: 100vh;
+
 }
 
 .travels_sidebar {
