@@ -1,20 +1,21 @@
 .footer {
     width: 100%;
     height: 135px;
-    background-color: black;
+    background-color: #E8E8E8;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
     
 }
 
 .footer_content {
     display: flex;
-    color: #D5CE50;
+    color: black;
     justify-content: center;
 
 }
 
 .footer_list  {
-    width: 300px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,12 +28,12 @@
 }
 
 .footer_titles{
-    color: #D5CE50;
+    color: #00A99F;
     padding-bottom: 10px;
 }
 
 .footer_copyright{
-    color: #D5CE50;
+    color: black;
     text-align: center;
     display: block;
 }

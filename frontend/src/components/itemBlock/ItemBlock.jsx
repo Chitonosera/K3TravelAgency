@@ -2,30 +2,31 @@ import React from 'react'
 import './ItemBlock.css'
 import { Link } from 'react-router-dom'
 
- const ItemBlock = () => {
-  return (
-    
-    <div className="item_block">
-      {/* <div className='item_photo' src="../public/Rectangle 4.png" alt="" /> */}
-      <div className="item_info">
-        <div className="info_top">
-          <img src="../public/Ellipse5.png" alt="" />
-          <img src="../public/Ellipse6.png" alt="" />
-          <img src="../public/Ellipse7.png" alt="" />
-          <img src="../public/Ellipse8.png" alt="" />
-        </div>
-        <div className="info_middle">
-          <h3 className='info_title'>Закарпаття</h3>
-          <h2 className='info_price'>100$</h2> 
-          <p className='info_dates'>1-6 жовтня</p>
-          <p className='info_seats'>Залишилось 1 місце</p>
-        </div>
-        <Link to='/travel'>
-          <button className="item_btn">Деталі</button>
-        </Link>
-      </div>         
-    </div>
-   
-  )
+const ItemBlock = () => {
+	return (
+		<div className='item_block'>
+			<div className='display'>
+      
+				<img
+					className='item_photo'
+					src='../../../public/slider1.jpg'
+					alt='logo'
+				/>
+				<div className='Container'>
+					<div className='item_info'>
+						<div className='info_middle'>
+							<h3 className='info_title'>Закарпаття</h3>
+							<h3 className='info_price'>1000UAH</h3>
+						</div>
+						<div>
+							<Link to='/travel'>
+								<button className='item_btn'></button>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
-export default ItemBlock;
+export default ItemBlock

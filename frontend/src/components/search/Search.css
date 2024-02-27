@@ -1,23 +1,23 @@
 .search {
-  position: relative;
+	position: relative;
+	top: 150px;
 }
 
 .inputSearch {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 12px 20px;
-  padding-left: 42px;
-  width: 50vw;
-  border-radius: 10px;
-  font-size: 16px;
-  outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 40px 20px;
+
+	width: 45vw;
+	border-radius: 20px;
+	font-size: 36px;
+	outline: none;
+	font-weight: bold;
 }
 
 .iconSearch {
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  left: 14px;
-  top: 10px;
-  
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	right: 15px;
+	top: 15px;
 }
-

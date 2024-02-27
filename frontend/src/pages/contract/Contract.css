@@ -1,29 +1,31 @@
 .contract_page {
-  font-family: Arial, sans-serif;
-  height: calc(100vh - 100px);
-  padding: 60px 60px 0px 60px;
+	font-family: Arial, sans-serif;
+	height: calc(100vh - 100px);
+	padding: 60px 60px 0px 60px;
 }
 
 .txt_contract {
-  background-color: #f4f4f4;
-  padding: 20px;
+	background-color: #f4f4f4;
+	padding: 20px;
 }
 
 .contract_title {
-  font-size: 28px;
-  color: #333;
-  text-align: center;
+	font-size: 28px;
+	color: #00a99f;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
 }
 
 .contract_subtitle {
-  text-align: center;
-  font-size: 24px;
-  color: #666;
-  margin-bottom: 16px;
+	text-align: center;
+	font-size: 30px;
+	color: black;
+	margin-bottom: 16px;
+	font-family: 'Poppins', sans-serif;
 }
 
 p.contract {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+	font-size: 24px;
+	line-height: 1.5;
+	color: black;
 }

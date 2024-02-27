@@ -1,82 +1,73 @@
-.item_block{
-  margin: 0 auto;
-  
-  margin-bottom: 2rem;
-  height: 400px;
-  width: 550px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 25px black;
-
-  background-image: url(../public/bgphoto.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+.item_block {
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	height: 485px;
+	width: 380px;
+	border-radius: 30px;
+	box-shadow: 5px 5px 25px black;
+	display: flex;
+	align-items: end;
+	overflow: hidden;
 }
 
-/* .item_photo{
-  background-size: cover;
-  min-height: 100%;
-  min-width: 100%;
-
-} */
-
-.item_info{
-  height: 100%;
-  width: 50%;
+.display {
+	height: 485px;
+	width: 380px;
+	position: absolute;
+	overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(0,0,0, 0.6);
-  border-radius: 10px;
-  padding: 15px 0;
+  justify-content: center;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.info_top{
-  display: flex;
-  margin-bottom: 25px;
+.item_photo {
+	position: relative;
+	
 }
 
-.info_middle{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.item_info {
+	height: 132px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #272444;
+	padding: 15px 0;
+	position: relative;
 }
 
-.info_title{
-  color: white;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 83px;
+.info_middle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.info_price{
-  color: white;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
+.info_title {
+	color: white;
+	font-size: 24px;
+	font-weight: 700;
+	}
+
+.info_price {
+	color: white;
+	font-size: 24px;
+	font-weight: 700;
+	
 }
 
-.info_dates{
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  border-bottom: 2px solid #fff;
-  margin-bottom: 16px;
+.item_btn {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	display: inline-block;
+	background-color: #ffcb74;
+	color: #f6f6f6;
+	padding: 0.75rem 2rem;
 }
 
-.info_seats{
-  color: white;
-  font-size: 20px;
-  margin-bottom: 18px;
-}
-
-.item_btn{
-  cursor: pointer;
-  border: none;
-  outline: none;
-  display: inline-block;
-  background-color: #ffcb74;
-  color: #f6f6f6;
-  padding: 0.75rem 2rem;
-
+.Container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
