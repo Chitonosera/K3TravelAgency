@@ -1,12 +1,13 @@
 import React from 'react'
 import './ItemBlock.css'
 import { Link } from 'react-router-dom'
+import Score from '../../../public/svg/Score'
+import Button from '../../../public/svg/Button'
 
 const ItemBlock = () => {
 	return (
 		<div className='item_block'>
 			<div className='display'>
-      
 				<img
 					className='item_photo'
 					src='../../../public/slider1.jpg'
@@ -20,7 +21,18 @@ const ItemBlock = () => {
 						</div>
 						<div>
 							<Link to='/travel'>
-								<button className='item_btn'></button>
+								<div className='logic'>
+									<div className='score'>
+										<Score />
+										<Score />
+										<Score />
+										<Score />
+									</div>
+									<button className='item_btn'>
+										<Button />
+									</button>
+									<h2 id='seats'>30</h2>
+								</div>
 							</Link>
 						</div>
 					</div>

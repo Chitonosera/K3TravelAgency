@@ -1,0 +1,98 @@
+.BuyTicketBlock {
+	width: 1200px;
+  height: 700px;
+  margin: 205px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+	background-color: #d9d9d9;
+	border-radius: 20px;
+	box-shadow: 0px 10px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.BuyTicketHeader {
+	font-size: 48px;
+	font-weight: bold;
+	color: #000;
+	display: flex;
+	justify-content: space-between;
+	padding: 40px;
+}
+
+.BtnClose {
+	background-color: #d9d9d9;
+	border: none;
+}
+
+.BuyTicketInfo {
+	display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 195px;
+}
+
+.BuyTicketInfo_output {
+  width: 150px;
+  height: 75px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #CCCCCC;
+}
+
+.infobt {
+  font-size: 24px;
+  text-align: center;
+  width: 150px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.AddInfoTicket {
+  width: 100%;
+  display: flex;
+
+}
+
+.AddInfoTicket input {
+  width: 300px;
+  height: 50px;
+  background-color: #CCCCCC;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.UserInfo {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.BuyTicketBottom {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0px 115px 80px 0px;
+}
+
+.ApplyOrder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 70px;
+  background-color: #272444;
+  color: #00A99F;
+  font-size: 32px;
+  font-weight: 400;
+  border-radius: 20px;
+}
+
+

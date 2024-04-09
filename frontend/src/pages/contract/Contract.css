@@ -1,7 +1,7 @@
 .contract_page {
-	font-family: Arial, sans-serif;
-	height: calc(100vh - 100px);
-	padding: 60px 60px 0px 60px;
+	font-family: 'Poppins', sans-serif;
+	height: auto;
+	padding: 60px 60px 60px 60px;
 }
 
 .txt_contract {

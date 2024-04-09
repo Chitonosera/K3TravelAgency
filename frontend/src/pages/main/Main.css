@@ -2,7 +2,7 @@
 	height: 100%;
 }
 
-.travels_top{
+.travels_top {
 	position: absolute;
 	z-index: 100;
 	width: 100%;
@@ -34,7 +34,7 @@
 }
 
 .travels_titles h1 span {
-	color: #00A99F;
+	color: #00a99f;
 }
 
 .travels_carousel {
@@ -44,6 +44,54 @@
 	z-index: 0;
 }
 
-.travels_pyri_pyri {
+.travels_card {
 	display: flex;
+}
+
+.mtxt {
+	text-align: center;
+	margin: 20px 0 134px 0;
+	font-size: 64px;
+	font-weight: bold;
+}
+
+.politic {
+	margin: 250px 20px 20px 100px;
+}
+
+.politic_pyri {
+	display: flex;
+}
+
+#image_politic {
+	height: 850px;
+	width: auto;
+	margin: 250px 0px 0px 270px;
+}
+
+.link_travels {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	margin-top: 70px;
+	margin-left: 60px;
+	margin: 70px 0px 0px 60px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+.collection_card p {
+	font-size: 40px;
+	font-weight: bold;
+	color: #00a99f;
+	align-items: center;
+	margin: 100px 20px 0px 0px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+.Support {
+	margin-top: 127px;
 }

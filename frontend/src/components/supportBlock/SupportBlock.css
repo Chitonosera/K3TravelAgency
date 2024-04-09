@@ -1,0 +1,73 @@
+.SupportBlock {
+	width: 1660px;
+	height: 734.07px;
+	background-color: #272444;
+	border-radius: 90px;
+	margin: 0 auto;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+}
+
+.Stxt {
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	margin: 0px 20px;
+}
+
+.Cont {
+	margin: 20px 54px;
+	padding: 20px;
+	display: flex;
+	width: 472px;
+}
+
+.Tcont {
+	font-size: 28px;
+	color: #00a99f;
+	display: block;
+	width: 400px;
+	height: auto;
+	margin-left: 84px;
+	margin-top: -20px;
+}
+
+.InputBlock input {
+	width: 400px;
+	height: 70px;
+	border-radius: 50px;
+	color: #272444;
+	font-size: 28px;
+	padding: 15px;
+	margin: 40px 68px;
+}
+
+.kurwa {
+	display: flex;
+	justify-content: flex-end;
+	margin: 20px 54px;
+	flex-direction: column;
+	
+}
+
+.kurwa input {
+	width: 920px;
+	height: 450px;
+	font-size: 28px;
+	color: #272444;
+	border-radius: 50px;
+	margin:0px 124px 0 0;
+	padding-bottom: 350px;
+	padding-left: 5px;
+}
+
+.BtnAccept {
+		width: 400px;
+		height: 89px;
+		background-color: #00A99F;
+		border-radius: 20px;
+		justify-content: right;
+		font-size: 32px;
+		color: #FFFFFF;
+		margin: 20px;
+}

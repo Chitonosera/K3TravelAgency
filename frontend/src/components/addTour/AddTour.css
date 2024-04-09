@@ -1,0 +1,98 @@
+.AddTourBlock {
+	width: 1300px;
+	height: 500px;
+	background-color: #d9d9d9;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.AddTourInfo {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+}
+.AddTourTitle {
+	background-color: #272444;
+	font-size: 32px;
+	font-weight: bold;
+	border-radius: 20px;
+	color: white;
+	height: 75px;
+  text-align: center;
+	width: 300px;
+ 
+}
+
+.AddTourInput {
+  background-color: #FFF6EF;
+  width: 300px;
+  height: 70px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #272444;
+  border: none;
+  border-radius: 20px;
+  margin: 31px 0px;
+  padding: 10px;
+}
+
+.AddTourInputDes {
+  background-color: #FFF6EF;
+  width: 300px;
+  height: 270px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #272444;
+  border: none;
+  border-radius: 20px;
+  width: 300px;
+  margin-right: 60px;
+  margin-top: 20px;
+  padding-bottom: 200px;
+  padding-left: 5px;
+}
+
+.AddTourSeats  {
+  width: 100px;
+  height: 100px;
+  background-color: #272444;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
+.AddTourSvg {
+  margin-right: 60px;
+}
+
+.AddTourSeats p {
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.AddToursButton {
+  width: 300px;
+  height: 75px;
+  border-radius: 20px;
+  background-color: #272444;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.AddToursPhoto {
+  width: 300px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}

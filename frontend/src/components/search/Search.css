@@ -7,7 +7,7 @@
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 40px 20px;
 
-	width: 45vw;
+	width: 900px;
 	border-radius: 20px;
 	font-size: 36px;
 	outline: none;
@@ -19,5 +19,5 @@
 	height: 90px;
 	position: absolute;
 	right: 15px;
-	top: 15px;
+	top: 25px;
 }

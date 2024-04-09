@@ -1,7 +1,8 @@
 import React from 'react';
-import AdminProductList from '../../components/adminProductList/adminProductList';
-
 import './Admin.css';
+import ItemBlock from '../../components/itemBlock/ItemBlock';
+import AddTour from '../../components/addTour/AddTour';
+import EditTours from '../../components/editTours/EditTours'
 
 const Admin = () => {
   const [name, setName] = React.useState('');
@@ -24,32 +25,82 @@ const Admin = () => {
     });
     alert('Has been saved');
   };
+  
+  const [clickAddTour, setClickAddTour] = React.useState(false)
+	const [clickEditTour, setClickEditTour] = React.useState(false)
+	const handleAddTourClick = () => {
+		setClickAddTour(true)
+		setClickEditTour(false)
+	}
+
+	const handleEditTourClick = () => {
+		setClickEditTour(true)
+		setClickAddTour(false)
+	}
 
   return (
-    <div className="admin_page">
-      <AdminProductList />
+		// <div className="admin_page">
+		//   <AdminProductList />
 
-      <div className="tour-form">
-        <label>Назва туру:</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        <br />
-        <label>File:</label>
-        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
-        <br />
-        <label>Date:</label>
-        <input type="text" value={date} onChange={(e) => setDate(e.target.value)} />
-        <br />
-        <label>Price:</label>
-        <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
-        <br />
-        <label>Seats:</label>
-        <input type="text" value={seats} onChange={(e) => setSeats(e.target.value)} />
-        <br />
+		//   <div className="tour-form">
+		//     <label>Назва туру:</label>
+		//     <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+		//     <br />
+		//     <label>File:</label>
+		//     <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+		//     <br />
+		//     <label>Date:</label>
+		//     <input type="text" value={date} onChange={(e) => setDate(e.target.value)} />
+		//     <br />
+		//     <label>Price:</label>
+		//     <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
+		//     <br />
+		//     <label>Seats:</label>
+		//     <input type="text" value={seats} onChange={(e) => setSeats(e.target.value)} />
+		//     <br />
 
-        <button onClick={addProduct}>Додати тур</button>
-      </div>
-    </div>
-  );
+		//     <button onClick={addProduct}>Додати тур</button>
+		//   </div>
+		// </div>
+
+		<>
+			<div className='admin_page'>
+				<div className='admin_panel'>
+					<div className='AdminButton'>
+						<button onClick={handleAddTourClick}>Додати подорож</button>
+						<button onClick={handleEditTourClick}>Редагувати подорож</button>
+					</div>
+					<div className='panels'>
+						{handleAddTourClick}
+						{clickAddTour ? <AddTour /> : ''}
+						{handleEditTourClick}
+						{clickEditTour ? <EditTours /> : ''}
+					</div>
+				</div>
+
+				<div className='AdminInfo'>
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+					<ItemBlock />
+				</div>
+			</div>
+		</>
+	)
 };
 
 export default Admin;

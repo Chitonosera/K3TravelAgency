@@ -1,82 +1,22 @@
-.travel_page{
-  width: 100%;
-}
-
-.travel_baner {
-  width: 100%;
-  height: calc(100vh - 100px);
-  display: flex;
-  justify-content: flex-end;
-
-  background-image: url(../public/travel_page.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.travel_info{
-  width: 45%;
-  height: 100%;
-  background-color: rgba(0,0,0, 0.6);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
+.MainDesInfo {
+ margin: 0 auto;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-}
-
-.travel_title {
-  color: #fff;
-  font-size: 64px;
-  padding-bottom: 16px;
-}
-
-.travel_subtitle {
-  color: #fff;
-  font-size: 48px;
-  padding-bottom: 130px;
-}
-
-.travel_price {
-  color: #fff;
-  font-size: 48px;
-  padding-bottom: 92px;
-}
-
-.travel_dates {
-  color: #fff;
-  font-size: 48px;
-  padding-bottom: 40px;
-}
-
-.order_tour{
-  width: 50%;
-  height: 100px;
-  
-  color: white;
-  text-align: center;
-  font-size: 36px;
-  background-color: #D5CE50;
-  border-radius: 20px;
-  cursor: pointer;
-  outline: none;
-  border: none;
-}
-
-.additional_services {
   display: flex;
-  justify-content: center;
-  padding: 15px;
+  font-size: 48px;
+  font-weight: bold;
 }
 
-.additional_info {
-  background-color: #2f2f2f;
-  color: #f6f6f6;
-  width: 350px;
-  height: 150px;
-  border-radius: 10px;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  margin-left: 10px; 
+.CubeBlock {
+  display: flex;
+  width: 100%;
+  margin-top: 180px;
 }
+
+.Linesvg {
+  margin: 69px 260px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+

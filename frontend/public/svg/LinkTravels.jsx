@@ -1,0 +1,33 @@
+
+
+const LinkTravels = () => {
+  return (
+		<svg
+			width='100'
+			height='100'
+			viewBox='0 0 100 100'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'
+		>
+			<circle cx='50' cy='50' r='50' fill='#272444' />
+			<g clip-path='url(#clip0_113_683)'>
+				<path
+					d='M43.3125 30.75L38.9062 35.1562L53.2188 49.5L38.9062 63.8438L43.3125 68.25L62.0625 49.5L43.3125 30.75Z'
+					fill='#00A99F'
+				/>
+			</g>
+			<defs>
+				<clipPath id='clip0_113_683'>
+					<rect
+						width='75'
+						height='75'
+						fill='white'
+						transform='translate(12 12)'
+					/>
+				</clipPath>
+			</defs>
+		</svg>
+	)
+}
+
+export default LinkTravels

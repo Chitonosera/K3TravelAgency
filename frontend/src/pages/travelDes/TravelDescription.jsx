@@ -1,32 +1,42 @@
 import React from 'react'
 import './TravelDescription.css'
-
+import { travelDes } from '../../constants/Index'
+import TravelInfo from '../../components/travelInfo/TravelInfo'
+import Cube from '../../components/cube/Cube'
+import { CubeInfo } from '../../constants/Index'
+import LineSvg from '../../../public/svg/LineSvg'
+import BuyTicket from '../../components/buyTicket/BuyTicket'
 const TravelDescription = () => {
-  return (
-    <main className="travel_page">
-
-        <div className="travel_baner">
-            <div className="travel_info">
-                <h1 className='travel_title'>Назва подорожі</h1>
-                <h2 className='travel_subtitle'>Місце подорожі</h2>   
-                <h2 className='travel_price'>100$</h2> 
-                <p className='travel_dates'>Дата та час подорожі</p>       
-                <button className="order_tour">Забронювати місця</button>  
-            </div>
-        </div>
-
-        <div className="additional_services">
-          <div className='additional_info'>Проживання в готелі</div>
-          <div className='additional_info'>Екскурсійний супровід</div>
-          <div className='additional_info'>Організаційна підтримка до, під час подорожі</div>
-          <div className='additional_info'>Особисті витрати</div>
-          <div className='additional_info'>Харчування</div>
-          <div className='additional_info'>Додатковий трансфер в аеропорт</div>
-        </div>
-    </main>
-
-        
-  )
+	console.log(travelDes)
+	return (
+		<main className='travel_page'>
+			<div className='MainDesInfo'>
+				{travelDes.map(item => (
+					<div key={item.id}>
+						<TravelInfo
+							title={item.Title}
+							imgUrl={item.imgUrl}
+							seats={item.Seats}
+							price={item.Price}
+						/>
+					</div>
+				))}
+			</div>
+			<div className='CubeBlock'>
+				{CubeInfo.map(item => (
+					<div className='CubeLine' key={item.id}>
+						<Cube number={item.number} title={item.title} />
+					</div>
+				))}
+			</div>
+			<div className='Linesvg'>
+				<LineSvg />
+			</div>
+			<div>
+				<BuyTicket />
+			</div>
+		</main>
+	)
 }
 
-export default TravelDescription;
+export default TravelDescription

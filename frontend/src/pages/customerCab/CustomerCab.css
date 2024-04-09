@@ -1,145 +1,50 @@
-.customerCab_page{
-  height: calc(100vh - 100px);
-  padding-top: 40px;
+.InputBlockProfile {
+	display: flex;
+	flex-direction: column;
+  margin: 150px 0px;
+
 }
 
-.customerCab_page h1 {
+.MyProfileBlock {
+  background-color: white;
+}
+
+.InputBlockProfile input {
+	background-color: #d9d9d9;
+	color: #000;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 20px;
+	margin: 30px 30px;
+	width: 350px;
+	height: 60px;
+	padding: 12px 26px;
+	
+}
+
+.VerticlaLine {
+	border: 2px solid black;
+	height: 800px;
+}
+
+.TicketBlockMain {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+
+.MyProfileMain {
+	display: flex;
+}
+
+
+.Ptxt {
   text-align: center;
-  margin-bottom: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 150px;
 }
 
-.profile{
-  display: flex;
-  align-items: start;
-  justify-content: space-around;
-}
-
-.orders {
-  background-color: #D5CE50;
-  width: 28%;
-  height: 80px;
-  border-radius: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 24px;
-}
-
-.profile_block{
-  background-color: #222222;
-  border-radius: 4%;
-  max-height: 680px;
-  height: 100%;
-  width: 650px;
-  padding: 15px;
-}
-
-.kitty_tips {
-  background-color: #D5CE50;
-  width: 28%;
-  height: 150px;
-  border-radius: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 24px;
-}
-
-.kitty_tips-img {
-  position: relative;
-  top: 0;
-  left: -30px;
-}
-
-
-
-.profile_info {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #D5CE50;
-}
-
-
-.profile_logo{
-  background-color: #d9d9d9;
-  border-radius: 50%;
-  width: 110px;
-  height: 110px;
-  position: relative;
-  top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 18px;
-}
-
-.profile_logo img{
-  height: 90px;
-  width: 90px;
-  display: block;
-  text-align: center;
-}
-
-.user_info{
-  background-color: #d5ce50;
-  border-radius: 20px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-}
-
-.user_info h3 {
-  margin-left: 145px;
-  font-size: 28px;
-  color: #fff;
-}
-
-.profile_change{
-  height: 60%;
-}
-
-.change_h{
-  padding: 20px 0;
-  color: #D5CE50;
-  text-align: center;
-}
-
-.profile_item{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  margin-bottom: 35px;
-}
-
-.profile_item input{
-  height: 50px;
-  width: 65%;
-  border-radius: 50px;
-  padding-left: 18px;
-  font-size: 18px;
-}
-
-.profile_btn {
-  height: 50px;
-  width: 30%;
-  background-color: #d5ce50;
-  color: #fff;
-  border-radius: 50px;
-  font-size: 20px;
-}
-
-.btn_delete {
-  height: 45px;
-  width: 30%;
-  background-color: #F24949;
-  color: #fff;
-  border-radius: 50px;
-  font-size: 20px;
-  margin-bottom: 25px;
+.Pyp {
+  margin-right: 30px;
 }

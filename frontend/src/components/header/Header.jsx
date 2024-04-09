@@ -12,7 +12,7 @@ const Header = () => {
 		{ name: 'Головна', link: '/' },
 		{ name: 'Подорожі', link: '/calendar' },
 		{ name: 'Політика праці', link: '/contract' },
-		{ name: 'Про нас ', link: '/contacts' },
+		{ name: 'Підтримка ', link: '/contact' },
 	]
 
 	const logOut = () => {

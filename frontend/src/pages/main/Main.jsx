@@ -2,9 +2,12 @@ import React from 'react'
 
 import './Main.css'
 import Search from '../../components/search/Search'
-import Sort from '../../components/sort/Sort'
 import ItemBlock from '../../components/itemBlock/ItemBlock'
 import BasicDemo from '../../components/Carousel/BasicDemo'
+import HowWeWork from '../../components/howWeWork/HowWeWork'
+import LinkTravels from '../../../public/svg/LinkTravels'
+import SupportBlock from '../../components/supportBlock/SupportBlock'
+import { Link } from 'react-router-dom'
 
 const Main = () => {
 	return (
@@ -21,11 +24,39 @@ const Main = () => {
 				<Search />
 			</div>
 			<BasicDemo className='travels_carousel' />
-			<div className='travels_pyri_pyri'>
-				<h1>Подорожі</h1>
+			<h1 className='mtxt'>Подорожі</h1>
+			<div className='travels_card'>
 				<ItemBlock />
 				<ItemBlock />
 				<ItemBlock />
+				<div className='collection_card'>
+					<Link to={'./calendar'}>
+						<p>
+							Побачити всі <br></br> подорожі
+						</p>
+					</Link>
+
+					<button className='link_travels'>
+						<LinkTravels />
+					</button>
+				</div>
+			</div>
+			<div className='politic_pyri'>
+				<div className='politic'>
+					<h2 id='txtp'>Як ми працюємо</h2>
+					<h1>Знаходимо найкраще для вас</h1>
+					<HowWeWork />
+					<HowWeWork />
+					<HowWeWork />
+					<HowWeWork />
+				</div>
+				<img id='image_politic' src='./public/HowWeWork.png'></img>
+			</div>
+			<div className='Support'>
+				<h1 id='contacts' className='mtxt'>
+					Підтримка
+				</h1>
+				<SupportBlock />
 			</div>
 		</main>
 	)

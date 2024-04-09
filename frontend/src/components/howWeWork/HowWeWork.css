@@ -1,0 +1,32 @@
+.politic_work {
+	margin: 60px 0 20px 0px;
+	padding: 0px;
+	font-family: 'Merriweather', serif;
+}
+
+.politic_map {
+	background-color: #272444;
+	width: 120px;
+	height: 120px;
+	border-radius: 20px;
+	display: flex;
+}
+
+.politic_picture {
+	margin: 35px 0 0 35px;
+}
+
+.politic_block {
+	display: flex;
+}
+
+#txtp {
+	color: #00a99f;
+}
+
+.politic_info {
+	margin-top: 20px;
+	margin-left: 10px;
+	font-size: 25px;
+	width: 700px;
+}
