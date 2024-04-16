@@ -32,14 +32,11 @@ Route::get('list',[ProductController::class,'list']);
 Route::delete('delete/{id}',[ProductController::class,'delete']);
 Route::get('product/{id}',[ProductController::class,'getProduct']);
 
-
-
-
-// Route::post('addTour', [TourController::class, 'addTour']);
-// Route::get('getTour', [TourController::class, 'getTour']);
-// Route::delete('destroy', [TourController::class, 'destroy']);
-
-
-
-// Route::get('checkPhone/{number}', [UserController::class, 'checkPhone']);
-
+//купівля квитка 
+Route::post('storeTicket', [TicketController::class, 'storeTicket']);
+//отримамання даних квитка 
+Route::get('getTicket/{id}', [TicketController::class, 'getTicket']);
+//отримання даних користувача
+Route::get('getUserDataMyProfile',[UserController::class, 'getUserDataMyProfile']);
+//підтримка
+Route::post('addSupport', [SupportConroller::class, 'addSupport']);

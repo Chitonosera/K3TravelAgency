@@ -38,11 +38,16 @@ class UserController extends Controller
 
         if (!$user || !Hash::check($req->number, $user->number))
         {
-            return ["error" => "Vse Huinya"];
+            return ["error" => "error"];
         }
         return $number;
         
         
+    }
+
+    function getUserDataMyProfile(Request $req)
+    {
+        return User::find($id);
     }
 
 
