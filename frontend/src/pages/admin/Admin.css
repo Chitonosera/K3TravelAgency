@@ -7,13 +7,13 @@
 }
 
 .admin_panel {
-  display: flex;
-  
+ margin-bottom: 476px;
 }
 
 .AdminButton {
   display: flex;
   flex-direction: column;
+ 
 }
 
 .AdminButton button {
@@ -23,6 +23,7 @@
   border-radius: 20px;
   font-size: 32px;
   font-weight: bold;
+  margin: 20px;
   color: #FFFFFF;
 }
 

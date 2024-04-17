@@ -17,9 +17,23 @@
 .travels_titles {
 	display: flex;
 	flex-direction: column;
-	padding-right: 360px;
+	margin: 150px 37px 0 121px;
+	
 }
 
+.slider_text {
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.6);
+	display: block;
+	width: 656px;
+	height: 980px;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	border-bottom-right-radius: 20px; 
+	border-top-right-radius: 20px; 
+}
 .travels_titles h4 {
 	font-size: 36px;
 	font-weight: 700;

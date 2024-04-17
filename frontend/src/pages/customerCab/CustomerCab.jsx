@@ -23,12 +23,12 @@ const CustomerCab = () => {
 						</div>
 					</div>
 					<div className='VerticlaLine'></div>
-					<div className='TicketBlock'>
+					<div >
 						<div className='TicketBlockMain'>
-							<Ticket />
-							<Ticket />
-							<Ticket />
-							<Ticket />
+							<Ticket/>
+							<Ticket/>
+							<Ticket/>
+							<Ticket/>						
 						</div>
 					</div>
 				</div>

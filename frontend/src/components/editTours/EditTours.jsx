@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './EditTours.css'
 import Seats from '../../../public/svg/Seats'
 import AddPhotoSvg from '../../../public/svg/AddPhotoSvg'
 function EditTours() {
+	const [text, setText] = useState('')
+	const [error, setError] = useState('')
+
+	const handleChange = event => {
+		const newText = event.target.value
+		const maxLength = 9 // Максимальна довжина тексту
+
+		if (newText.length <= maxLength) {
+			setText(newText)
+			setError('')
+		} else {
+			setError('Перевищено максимальну довжину тексту!')
+		}
+	}
+	const handleSubmit = () => {
+		console.log('Введений текст:', text)
+	}
 	return (
 		<div className='AddTourBlock'>
 			<div className='ChangeTours'>
@@ -26,13 +43,21 @@ function EditTours() {
 					className='AddTourInput'
 					type='text'
 					placeholder='Введіть назву'
+					onChange={handleChange}
 				/>
+				{text.length > 9 && (
+					<p style={{ color: 'red' }}>Перевищено максимальну довжину тексту!</p>
+				)}
 				<p className='AddTourTitle'>Ціна</p>
 				<input
 					className='AddTourInput'
 					type='text'
 					placeholder='Введіть ціна'
+					onChange={handleChange}
 				/>
+				{text.length > 9 && (
+					<p style={{ color: 'red' }}>Перевищено максимальну довжину тексту!</p>
+				)}
 			</div>
 			<div className='AddTourSvg'>
 				<div className='AddTourSeats'>
@@ -44,7 +69,10 @@ function EditTours() {
 			</div>
 			<div className='AddToursPhoto'>
 				<AddPhotoSvg />
-				<button className='AddToursButton'>Підтвердити</button>
+				{error && <p style={{ color: 'red' }}>{error}</p>}
+				<button onClick={handleSubmit} className='AddToursButton'>
+					Підтвердити
+				</button>
 			</div>
 		</div>
 	)

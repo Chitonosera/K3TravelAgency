@@ -13,6 +13,7 @@ const Main = () => {
 	return (
 		<main className='travels'>
 			<div className='travels_top'>
+				<div className='slider_text'>
 				<div className='travels_titles'>
 					<h4>Найкращі подорожі в нас</h4>
 					<h1>
@@ -21,7 +22,7 @@ const Main = () => {
 						<br /> <span>разом з нами</span>
 					</h1>
 				</div>
-				<Search />
+				</div>
 			</div>
 			<BasicDemo className='travels_carousel' />
 			<h1 className='mtxt'>Подорожі</h1>

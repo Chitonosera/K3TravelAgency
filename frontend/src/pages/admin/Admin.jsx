@@ -68,7 +68,7 @@ const Admin = () => {
 				<div className='admin_panel'>
 					<div className='AdminButton'>
 						<button onClick={handleAddTourClick}>Додати подорож</button>
-						<button onClick={handleEditTourClick}>Редагувати подорож</button>
+						<button id='mt' onClick={handleEditTourClick}>Редагувати подорож</button>
 					</div>
 					<div className='panels'>
 						{handleAddTourClick}

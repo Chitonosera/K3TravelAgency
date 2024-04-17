@@ -19,10 +19,10 @@
 	font-weight: bold;
 	border-radius: 20px;
 	color: white;
-	height: 75px;
+  padding: 10px;
   text-align: center;
 	width: 300px;
- 
+  
 }
 
 .AddTourInput {
